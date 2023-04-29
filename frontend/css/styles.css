@@ -45,16 +45,16 @@ footer {
 .tile {
   position: relative;
   height: 100%;
-  width:100%; 
+  width: calc(100% - 20px); 
   padding: 6px; 
   border-radius: 8px;
   cursor: pointer;
   -webkit-transition: 0.2s all;
   overflow: hidden;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: flex-end;
-  
+  align-items: center;
 }
 .tile img {
   width: 100%;
@@ -69,7 +69,8 @@ footer {
 }
 
 .tile-text {
-  
+
+  color: white;
   position: absolute;
   z-index: 1;
   text-transform: uppercase;

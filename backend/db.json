@@ -31,6 +31,12 @@
       "image": "https://images.pexels.com/photos/2940925/pexels-photo-2940925.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
     },
     {
+      "id": "london",
+      "city": "London",
+      "description": "250+ Places",
+      "image": "https://wallpaperaccess.com/full/32528.jpg"
+    },
+    {
       "id": "bangkok",
       "city": "Bangkok",
       "description": "250+ Places",
