@@ -1,7 +1,7 @@
 {
   "cities": [
     {
-      "id": "bengaluru",
+      "id": "London",
       "city": "Bengaluru",
       "description": "100+ Places",
       "image": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -31,12 +31,6 @@
       "image": "https://images.pexels.com/photos/2940925/pexels-photo-2940925.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
     },
     {
-      "id": "london",
-      "city": "London",
-      "description": "250+ Places",
-      "image": "https://wallpaperaccess.com/full/32528.jpg"
-    },
-    {
       "id": "bangkok",
       "city": "Bangkok",
       "description": "250+ Places",
@@ -53,6 +47,12 @@
       "city": "Paris",
       "description": "100+ Places",
       "image": "https://images.pexels.com/photos/1461974/pexels-photo-1461974.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+    },
+    {
+      "id": "london",
+      "city": "London",
+      "description": "250+ Places",
+      "image": "https://wallpaperaccess.com/full/32528.jpg"
     }
   ],
   "adventures": [
