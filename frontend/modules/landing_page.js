@@ -24,7 +24,7 @@ async function fetchCities() {
     console.log(cities)
     return cities;
   } catch (error) {
-    console.error(error);
+    return null;
   }
   
 
@@ -33,16 +33,18 @@ async function fetchCities() {
 //Implementation of DOM manipulation to add cities
 function addCityToDOM(id, city, description, image) {
  let container = document.createElement("div");
- container.className="col-6";
  container.innerHTML=`
- < a href="pages/adventures/?city=${id}>
- <div>
- <div>
- <p>${city}</p>
- <p>${description}</p>
- </div>
- <img src=${image} alt="#">
- </div>
+ 
+ <a href="pages/adventures/?city=${id}">
+  <div class="tile col-12 col-sm-6 col-lg-3 mb-4">
+   <img src=${image} alt="#">
+    <div "tile-text text-center">
+     <h5>${city}</h5>
+     <p>${description}</p>
+    </div>
+  </div>
+ </a>
+ 
  `
  document.getElementById("data").appendChild(container);
 }
