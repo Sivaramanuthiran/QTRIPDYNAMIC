@@ -1,7 +1,7 @@
 {
   "cities": [
     {
-      "id": "London",
+      "id": "london",
       "city": "Bengaluru",
       "description": "100+ Places",
       "image": "https://images.pexels.com/photos/3573382/pexels-photo-3573382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
@@ -61,7 +61,7 @@
       "adventures": [
         {
           "id": "2447910730",
-          "name": "Niaboytown",
+          "name": "Park",
           "costPerHead": 4003,
           "currency": "INR",
           "image": "https://images.pexels.com/photos/837745/pexels-photo-837745.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
@@ -93,6 +93,15 @@
           "currency": "INR",
           "image": "https://images.pexels.com/photos/631522/pexels-photo-631522.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
           "duration": 3,
+          "category": "Cycling"
+        }, 
+        {
+          "id": "9500691679",
+          "name": "Park",
+          "costPerHead": 352,
+          "currency": "INR",
+          "image": "https://images.pexels.com/photos/45987/pexels-photo-45987.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+          "duration": 30,
           "category": "Cycling"
         },
         {
@@ -140,6 +149,7 @@
           "duration": 5,
           "category": "Party"
         }
+       
       ]
     },
     {
