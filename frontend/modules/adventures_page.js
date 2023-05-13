@@ -30,14 +30,16 @@ function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
   adventures.forEach((key) =>{
-  const adv=document.createElement("div");
-  adv.className="col-6 col-lg-3 nb-4";
-  adv.innerHTML=`
-      <a href="detail/?adventure=${key.id}" id="${key.id}">
-       <div class="category-banner">${key.category}</div>
-        <img class="img-responsive"
-            src="${key.image}"/>
-            <div class="activity-card-text text-md-center w-100 mt-3">
+  const ele=document.createElement("div");
+  ele.className="col-6 col-lg-3 mb-4";
+  ele.innerHTML=`
+      <a href="detail/?adventure=${key.id}" id=${key.id}>
+       <div class="activity-card">
+        <div class="category-banner">${key.category}</div>
+          <img class="img-responsive"
+            src=${key.image}
+          />
+            <div class="activity-card-text text-md-center w-100 mt-3 px-2">
              <div class="d-block d-md-flex justify-content-between flex-wrap pl-3 pr-3">
                <h5 class="text-left">${key.name}</h5>
                <p>${key.costPerHead}</p>
@@ -53,7 +55,7 @@ function addAdventureToDOM(adventures) {
 
   
   `;
- document.getElementById("data1").appendChild(adv);
+ document.getElementById("data1").appendChild(ele);
   
 });
 
@@ -63,14 +65,17 @@ function addAdventureToDOM(adventures) {
 function filterByDuration(list, low, high) {
   // TODO: MODULE_FILTERS
   // 1. Filter adventures based on Duration and return filtered list
-
+ const filteredDuration = list.filter(time => time.duration>=low && time.duration<=high);
+ return filteredDuration;
+ console.log(filteredDuration);
+  
 }
 
 //Implementation of filtering by category which takes in a list of adventures, list of categories to be filtered upon and returns a filtered list of adventures.
 function filterByCategory(list, categoryList) {
   // TODO: MODULE_FILTERS
   // 1. Filter adventures based on their Category and return filtered list
-
+    
 }
 
 // filters object looks like this filters = { duration: "", category: [] };
