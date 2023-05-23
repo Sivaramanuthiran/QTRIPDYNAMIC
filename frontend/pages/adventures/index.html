@@ -83,7 +83,7 @@
                 </div>
             </div>
             <!-- Display Adventures cards -->
-            <div class="row" id="data1"></div>
+            <div class="row" id="data"></div>
         </div>
     </div>
     <!-- Footer -->
@@ -146,8 +146,14 @@
             // TODO: MODULE_FILTERS
             // 1. Change the DOM to show the selected duration filter. Use the provided input event
             // 2. Invoke saveFiltersToLocalStorage here
+            document.getElementById("data").textContent="";
             let filterOption=event.target.value;
-            filterByDuration(adventures,filterOption); 
+            filters["duration"]=filterOption;
+
+            generateFilterPillsAndUpdateDOM(filters);
+
+           let filteredAdventures = filterByDuration(adventures,filters); 
+           addAdventureToDOM(filteredAdventures);
 
         }
 
@@ -156,9 +162,11 @@
             // TODO: MODULE_FILTERS
             // 1. Change the DOM to clear the Duration filter. Refer clearCategory() below
             // 2. Invoke saveFiltersToLocalStorage here
-            event.preventDefault();
-            const  durationSelect=document.getElementById("duration-select");
-            durationSelect.selectedIndex=0;
+            document.getElementById("data").textContent= "";
+            document.getElementById("duration-list").textContent= "";
+            filters["duration"] =[];
+            let filteredAdventures =filterFunction(adventures, filters);
+            addAdventureToDOM(filteredAdventures);
 
         }
 
