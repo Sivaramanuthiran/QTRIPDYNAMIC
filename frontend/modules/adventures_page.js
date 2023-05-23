@@ -20,7 +20,7 @@ async function fetchAdventures(city) {
     return data;
   }
   catch(e){
-    return e;
+    return null;
   }
 }
 
