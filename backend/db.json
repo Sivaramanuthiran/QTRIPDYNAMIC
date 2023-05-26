@@ -118,7 +118,7 @@
         },
         {
           "id": "3727396712",
-          "name": "Shiwood",
+          "name": "Park",
           "costPerHead": 1352,
           "currency": "INR",
           "image": "https://images.pexels.com/photos/45987/pexels-photo-45987.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
@@ -822,7 +822,7 @@
     },
     {
       "id": "3727396712",
-      "name": "Shiwood",
+      "name": "park",
       "subtitle": "This is a mind-blowing adventure!",
       "images": [
         "https://images.pexels.com/photos/45987/pexels-photo-45987.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
