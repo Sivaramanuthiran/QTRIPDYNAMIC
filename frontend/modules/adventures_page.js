@@ -65,7 +65,8 @@ function addAdventureToDOM(adventures) {
 function filterByDuration(list, low, high) {
   // TODO: MODULE_FILTERS
   // 1. Filter adventures based on Duration and return filtered list
- const filteredDuration = list.filter(time => time.duration>=low && time.duration<=high);
+ const filteredDuration = list.filter(adventure =>{ if(adventure.duration >= low && adventure.duration <= high){return true;}
+});
  return filteredDuration;
  
   
