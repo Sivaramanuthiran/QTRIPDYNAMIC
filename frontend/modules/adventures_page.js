@@ -26,7 +26,7 @@ async function fetchAdventures(city) {
 
 //Implementation of DOM manipulation to add adventures for the given city from list of adventures
 function addAdventureToDOM(adventures) {
-  console.log(adventures);
+  
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
   adventures.forEach((key) =>{

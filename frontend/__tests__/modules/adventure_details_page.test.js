@@ -67,8 +67,8 @@ describe("Adventure Detail Page Tests", function () {
 
   it("Tries adding a Adventure Details - Park", function () {
     let adventure = {
-      id: "6298356896",
-      name: "Grand Dinyardlodge",
+      id: "park",
+      name: "park",
       subtitle: "This is a mind-blowing adventure!",
       images: [
         "https://images.pexels.com/photos/3061171/pexels-photo-3061171.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
