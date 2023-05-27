@@ -36,6 +36,7 @@ function addAdventureDetailsToDOM(adventure) {
  document.getElementById("adventure-name").innerHTML=adventure.name;
  document.getElementById("adventure-subtitle").innerHTML=adventure.subtitle;
  document.getElementById("adventure-content").innerHTML=adventure.content;
+ addBootstrapPhotoGallery(adventure.images)
 }
 
 //Implementation of bootstrap gallery component
