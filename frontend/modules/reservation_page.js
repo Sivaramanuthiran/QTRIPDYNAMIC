@@ -32,14 +32,26 @@ function addReservationToTable(reservations) {
 
    reservations.forEach((reservation) => {
     let row =document.createElement("tr");
+    const reservationDate = new Date(reservation.date).toLocaleDateString("en-IN")
+    const reservationTate = new Date(reservation.time).toLocaleString("en-IN" , {
+     year:"numeric",
+     day: "numeric",
+     month:"long",
+     hour:"numeric",
+     minute:"numeric",
+     second:"numeric",
+     hour12:true,
+    })
+    const button=`<div class="reservation-visit-button" id=${reservation.id}><a href="../detail/adventure=${reservation.adventure}">Visit Adventure</a></div>`
     row.innerHTML=`
     <th>${reservation.id}</th>
-    <th>${reservation.name}</th>
-    <th>${reservation.adventureName}</th>
-    <th>${reservation.person}</th>
-    <th>${reservation.date}</th>
-    <th>${reservation.price}</th>
-    <th>${reservation.time}</th>
+    <td>${reservation.name}</td>
+    <td>${reservation.adventureName}</td>
+    <td>${reservation.person}</td>
+    <td>${reservationDate}</td>
+    <td>${reservation.price}</td>
+    <td>${reservation.time}</td>
+    <td>${button}</td>
     
     
     `

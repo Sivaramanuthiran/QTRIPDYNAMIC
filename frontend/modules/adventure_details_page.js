@@ -103,7 +103,7 @@ function captureFormSubmit(adventure) {
       adventure:adventure.id,
       name:formElems.name.value,
       date:formElems.date.value,
-      persons: formElems.persons.value,
+      persons: formElems.person.value
     }
     let response = await fetch(config.backendEndpoint +`/reservation/new`,{method:'POST',
   headers:{'content-Type':'application/json'},
