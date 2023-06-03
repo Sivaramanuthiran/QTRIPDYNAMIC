@@ -6,7 +6,7 @@ async function fetchReservations() {
   // 1. Fetch Reservations by invoking the REST API and return them
 
   try{
-    const result = await fetch(config.backendEndpoint+`/reservations/`);
+    const result = await fetch(config.backendEndpoint +`/reservations/`);
     const data= await result.json();
     return data;
   }
@@ -21,7 +21,7 @@ async function fetchReservations() {
 function addReservationToTable(reservations) {
   // TODO: MODULE_RESERVATIONS
   // 1. Add the Reservations to the HTML DOM so that they show up in the table
-   if(reservations.length>0){
+   if(reservations.length > 0){
     document.getElementById("no-reservation-banner").style.display="none";
     document.getElementById("reservation-table-parent").style.display="block";
    }
@@ -33,7 +33,7 @@ function addReservationToTable(reservations) {
    reservations.forEach((reservation) => {
     let row =document.createElement("tr");
     const reservationDate = new Date(reservation.date).toLocaleDateString("en-IN")
-    const reservationTate = new Date(reservation.time).toLocaleString("en-IN" , {
+    const reservationTime = new Date(reservation.time).toLocaleString("en-IN" , {
      year:"numeric",
      day: "numeric",
      month:"long",
@@ -42,7 +42,7 @@ function addReservationToTable(reservations) {
      second:"numeric",
      hour12:true,
     })
-    const button=`<div class="reservation-visit-button" id=${reservation.id}><a href="../detail/adventure=${reservation.adventure}">Visit Adventure</a></div>`
+    const button=`<div class="reservation-visit-button" id=${reservation.id}><a href="../detail/?adventure=${reservation.adventure}">Visit Adventure</a></div>`
     row.innerHTML=`
     <th>${reservation.id}</th>
     <td>${reservation.name}</td>
