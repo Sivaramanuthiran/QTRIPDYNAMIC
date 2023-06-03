@@ -96,16 +96,16 @@ function calculateReservationCostAndUpdateDOM(adventure, persons) {
 function captureFormSubmit(adventure) {
   // TODO: MODULE_RESERVATIONS
   // 1. Capture the query details and make a POST API call using fetch() to make the reservation
-  document.getElementById('myForm').addEventListener('submit',async(e)=>{
+  document.getElementById('myForm').addEventListener('submit',async (e) => {
     e.preventDefault();
     const formElems =e.target.elements
     const formData={
-      adventure:adventure.id,
-      name:formElems.name.value,
-      date:formElems.date.value,
-      persons: formElems.person.value
+      adventure: adventure.id,
+      name: formElems.name.value,
+      date: formElems.date.value,
+      person: formElems.person.value
     }
-    let response = await fetch(config.backendEndpoint +`/reservation/new`,{method:'POST',
+    let response = await fetch(config.backendEndpoint +`/reservations/new`,{method:'POST',
   headers:{'content-Type':'application/json'},
   body:JSON.stringify(formData),});
   let result =await response.json();
