@@ -35,7 +35,7 @@ function addReservationToTable(reservations) {
     let row =document.createElement("tr");
     const reservationDate = new Date(reservation.date).toLocaleString("en-IN" ,{day:"numeric",year:"numeric",
     month:"numeric",})
-    const reservationTime = new Date(reservation.time).toLocaleString("en-US",{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' })
+    const reservationTime = new Date(reservation.time).toLocaleString("en-US",{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12:true })
     const button=`<div class="reservation-visit-button" id=${reservation.id}><a href="../detail/?adventure=${reservation.adventure}">Visit Adventure</a></div>`
     row.innerHTML=`
     <th>${reservation.id}</th>
