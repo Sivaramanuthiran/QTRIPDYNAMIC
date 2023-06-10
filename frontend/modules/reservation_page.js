@@ -32,16 +32,9 @@ function addReservationToTable(reservations) {
 
    reservations.forEach((reservation) => {
     let row =document.createElement("tr");
-    const reservationDate = new Date(reservation.date).toLocaleDateString("en-IN")
-    const reservationTime = new Date(reservation.time).toLocaleString("en-IN" , {
-     year:"numeric",
-     day: "numeric",
-     month:"long",
-     hour:"numeric",
-     minute:"numeric",
-     second:"numeric",
-     hour12:true,
-    })
+    const reservationDate = new Date(reservation.date).toLocaleString("en-IN" ,{day:"numeric",year:"numeric",
+    month:"numeric",})
+    const reservationTime = new Date(reservation.time).toLocaleTimeString("en-US",{day:"numeric",month:"long",year:"numeric",hour:"numeric",minute:"numeric",second:"numeric",hour12:true,})
     const button=`<div class="reservation-visit-button" id=${reservation.id}><a href="../detail/?adventure=${reservation.adventure}">Visit Adventure</a></div>`
     row.innerHTML=`
     <th>${reservation.id}</th>
@@ -52,10 +45,8 @@ function addReservationToTable(reservations) {
     <td>${reservation.price}</td>
     <td>${reservation.time}</td>
     <td>${button}</td>
-    
-    
     `
-    document.getElementById("reservation-table").append(row);
+    document.getElementById("reservation-table").appendChild(row);
    })
    }
   //Conditionally render the no-reservation-banner and reservation-table-parent
