@@ -102,7 +102,7 @@ describe("Reservation Page Tests", function () {
     expect(
       document.getElementById("reservation-table").children[0].children[6]
         .innerHTML
-    ).toEqual("Wed Nov 04 2020 21:32:31 GMT+0530 (India Standard Time)");
+    ).toEqual("4 November 2020, 9:32:31 pm");
     expect(
       document.getElementById("reservation-table").children[1].children[4]
         .innerHTML
@@ -110,6 +110,6 @@ describe("Reservation Page Tests", function () {
     expect(
       document.getElementById("reservation-table").children[1].children[6]
         .innerHTML
-    ).toEqual("Wed Nov 04 2020 20:30:59 GMT+0530 (India Standard Time)");
+    ).toEqual("4 November 2020, 8:30:59 pm");
   });
 });
