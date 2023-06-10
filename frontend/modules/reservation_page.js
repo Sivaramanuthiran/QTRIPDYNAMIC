@@ -29,12 +29,13 @@ function addReservationToTable(reservations) {
     document.getElementById("no-reservation-banner").style.display="block";
     document.getElementById("reservation-table-parent").style.display="none";
    }
+   
 
    reservations.forEach((reservation) => {
     let row =document.createElement("tr");
     const reservationDate = new Date(reservation.date).toLocaleString("en-IN" ,{day:"numeric",year:"numeric",
     month:"numeric",})
-    const reservationTime = new Date(reservation.time).toLocaleTimeString("en-US",{day:"numeric",month:"long",year:"numeric",hour:"numeric",minute:"numeric",second:"numeric",hour12:true,})
+    const reservationTime = new Date(reservation.time).toLocaleString("en-US",{ year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' })
     const button=`<div class="reservation-visit-button" id=${reservation.id}><a href="../detail/?adventure=${reservation.adventure}">Visit Adventure</a></div>`
     row.innerHTML=`
     <th>${reservation.id}</th>
@@ -47,6 +48,7 @@ function addReservationToTable(reservations) {
     <td>${button}</td>
     `
     document.getElementById("reservation-table").appendChild(row);
+    console.log(reservation.time);
    })
    }
   //Conditionally render the no-reservation-banner and reservation-table-parent
